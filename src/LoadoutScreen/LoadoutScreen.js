@@ -27,7 +27,7 @@ export default class LoadoutScreen extends React.Component {
       return res.json()
     })
     .then((res) => {
-      this.setState({
+      /*this.setState({
         primary: {primaryName: res.primary.primaryName, primaryImg: res.primary.primaryImg, attachments: [res.primary.attachments]},
         secondary: {secondaryName: res.secondary.secondaryName, secondaryImg: res.secondary.secondaryImg, attachments: [res.secondary.attachments]},
         perk1: {perk1Name: res.perk1.perk1Name, perk1Img: res.perk1.perk1Img},
@@ -35,7 +35,8 @@ export default class LoadoutScreen extends React.Component {
         perk3: {perk3Name: res.perk3.perk3Name, perk3Img: res.perk3.perk3Img},
         lethal: {lethalName: res.lethal.lethalName, lethalImg: res.lethal.lethalImg},
         tactical: {tacticalName: res.tactical.tacticalName, tacticalImg: res.tactical.tacticalImg}
-      })
+      })*/
+      this.setState({...res})
     })
   }
   
