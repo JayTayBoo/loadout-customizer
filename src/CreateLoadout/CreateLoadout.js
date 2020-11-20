@@ -21,7 +21,7 @@ export default function CreateLoadout(props) {
                 <div className='spaceBelow'>Primary: {primary.primaryName}</div>
                 <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
               </div>
-              <div>
+              <div className='child_item'>
                 <div>Attachments:</div>
                 <ul className='attachments'>
                   {primary.attachments && primary.attachments.map(attachment=><li key={attachment}>{attachment}</li>)}
@@ -33,7 +33,7 @@ export default function CreateLoadout(props) {
                 <div className='spaceBelow'>Secondary: {secondary.secondaryName}</div>
                 <img src={`img/weapons/${secondary.secondaryImg}`} alt='some value'/>
               </div>
-              <div>
+              <div className='child_item'>
                 <div>Attachments:</div>
                 <ul className='attachments'>
                   {secondary.attachments && secondary.attachments.map(attachment=><li key={attachment}>{attachment}</li>)}
