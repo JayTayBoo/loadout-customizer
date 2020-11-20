@@ -6,9 +6,8 @@ export default class LandingPage extends React.Component {
       return(
       <div> 
         <Link to='/loadout'>
-          <button className='generate_loadout' type='button' onClick={console.log('Clicked Landing')}>Generate Loadout!</button>
+          <button className='generate_loadout' type='button'>Generate Loadout</button>
         </Link>
-        <div>Landing Page!</div>
       </div>
     );
   }

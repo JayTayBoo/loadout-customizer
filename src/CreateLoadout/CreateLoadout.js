@@ -12,7 +12,6 @@ import tacticalImg from '../img/perks_equipment/equipment/tacticala.png'*/
 
 export default function CreateLoadout(props) {
   const {primary, secondary, perk1, perk2, perk3, lethal, tactical} = props;
-  console.log(secondary)
     return(
       <div> 
         <form>
@@ -25,44 +24,44 @@ export default function CreateLoadout(props) {
               <div>
                 <div>Attachments:</div>
                 <ul className='attachments'>
-                  {primary.pattachments && primary.pattachments.map(attachment=><li>{attachment}</li>)}
+                  {primary.attachments && primary.attachments.map(attachment=><li key={attachment}>{attachment}</li>)}
                 </ul>
               </div>
             </div>
             <div className='secondary'>
               <div>
-                <div className='spaceBelow'>Secondary: {secondary.secondaryName}:</div>
-                <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
+                <div className='spaceBelow'>Secondary: {secondary.secondaryName}</div>
+                <img src={`img/weapons/${secondary.secondaryImg}`} alt='some value'/>
               </div>
               <div>
                 <div>Attachments:</div>
                 <ul className='attachments'>
-                  {secondary.sattachments && secondary.sattachments.map(attachment=><li>{attachment}</li>)}
+                  {secondary.attachments && secondary.attachments.map(attachment=><li key={attachment}>{attachment}</li>)}
                 </ul>
               </div>
             </div>
             <div className='perks'>
               <div>
                 <div>Perk 1: {perk1.perk1Name}</div>
-                <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
+                <img src={`img/weapons/${perk1.perk1Img}`} alt='some value'/>
               </div>
               <div>
                 <div>Perk 2: {perk2.perk2Name}</div>
-                <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
+                <img src={`img/weapons/${perk2.perk2Img}`} alt='some value'/>
               </div>
               <div>
                 <div>Perk 3: {perk3.perk3Name}</div>
-                <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
+                <img src={`img/weapons/${perk3.perk3Img}`} alt='some value'/>
               </div>
             </div>
             <div className='equipment'>
               <div>
                 <div>Lethal: {lethal.lethalName}</div>
-                <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
+                <img src={`img/weapons/${lethal.lethalImg}`} alt='some value'/>
               </div>
               <div>
                 <div>Tactical: {tactical.tacticalName}</div>
-                <img src={`img/weapons/${primary.primaryImg}`} alt='some value'/>
+                <img src={`img/weapons/${tactical.tacticalImg}`} alt='some value'/>
               </div>
             </div>
           </div>
